@@ -25,8 +25,12 @@ These instructions will help you get this project up and running.
 
 1. In your Azure Storage account, create a new container called `models`. For more information on how to create a container, see [Create a container](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 1. Upload the *IrisClassification.zip* file in the *MLModels* project directory to the `models` directory. Once uploaded, enable blob storage. For more information on uploading files to a container, see [Upload a block blob](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#upload-a-block-blob).
+1. Select **Change access level** and make sure that it's set to **Blob (anonymous read access for blobs only)**.
+
+    ![Azure Storage blob access level change](images/blob-access-level.png)
+
 1. Open the *Index.razor* in the *MLBlazorExcelAddIn/Pages* directory in your preferred text editor.
-1. Update the `_modelUrl` value with the URL of the blob containing your blob.
+1. Update the `_modelUrl` value with the URL of the blob containing your model.
 
     ```csharp
     _modelUrl = "<YOUR-MODEL-BLOB-URL>";
