@@ -109,7 +109,7 @@ After a few seconds, your add-in is loaded. For more information on uploading yo
 
 1. Use the `MLNET.IRIS.PREDICT` custom function defined by your add-in to make a predictions using the data you previously entered as inputs.
 
-    ![Prediction made by custom function add-in](images/predition-addin.png)
+    ![Prediction made by custom function add-in](images/prediction-addin.png)
 
 Your prediction should display in the cell where you used the custom function.
 
