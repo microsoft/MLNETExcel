@@ -1,0 +1,77 @@
+﻿@page "/"
+@inject HttpClient _client
+@inject IJSRuntime Js
+
+<PageTitle>ML.NET Excel Add-In</PageTitle>
+
+<h1>Welcome to your ML.NET Excel Add-In</h1>
+
+<p>Models available</p>
+
+<ul>
+    <li>Iris classification</li>
+</ul>
+
+<h2>Iris classification model</h2>
+
+<h3>Inputs</h3>
+<ul>
+    <li>col0: float</li>
+    <li>col1: float</li>
+    <li>col2: float</li>
+    <li>col3: float</li>
+</ul>
+
+<h3>Outputs</h3>
+
+<ul>
+    <li>col4:string</li>
+</ul>
+
+<p>To use this model, use the custom function <code>=MLNET.IRIS.PREDICT()</code> 
+    and pass in the values</p>
+@code {
+    private PredictionEngine<IrisClassification.ModelInput, IrisClassification.ModelOutput> _predictionEngine;
+    private DotNetObjectReference<Index>? dotNetHelper;
+    private string? result;
+    private string _modelUrl;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _modelUrl = "<YOUR-MODEL-BLOB-URL>";
+        var savedModel = await _client.GetStreamAsync(_modelUrl);
+        MLContext mlContext = new MLContext();
+        ITransformer _model = mlContext.Model.Load(savedModel, out DataViewSchema schema);
+        _predictionEngine = mlContext.Model.CreatePredictionEngine<IrisClassification.ModelInput, IrisClassification.ModelOutput>(_model);
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if(firstRender)
+        {
+            dotNetHelper = DotNetObjectReference.Create(this);
+            await Js.InvokeVoidAsync("MLFunctions.setDotNetHelper", dotNetHelper);
+        }
+    }
+
+    [JSInvokable]
+    public string MakePrediction(string sepalLength, string sepalWidth, string petalLength, string petalWidth)
+    {
+        var input = new IrisClassification.ModelInput
+        {
+            Col0 = float.Parse(sepalLength),
+            Col1 = float.Parse(sepalWidth),
+            Col2 = float.Parse(petalLength),
+            Col3 = float.Parse(petalWidth)
+        };
+
+        var prediction = _predictionEngine.Predict(input);
+
+        return prediction.PredictedLabel;
+    }
+
+    public void Dispose()
+    {
+        dotNetHelper?.Dispose();
+    }
+}

@@ -1,0 +1,34 @@
+{
+  "functions": [
+    {
+      "description": "Predict iris flowers",
+      "id": "IRIS.PREDICT",
+      "name": "IRIS.PREDICT",
+      "parameters": [
+        {
+          "description": "Sepal length",
+          "name": "sepalLength",
+          "type": "string"
+        },
+        {
+          "description": "Sepal width",
+          "name": "sepalWidth",
+          "type": "string"
+        },
+        {
+          "description": "Petal length",
+          "name": "petalLength",
+          "type": "string"
+        },
+        {
+          "description": "Petal width",
+          "name": "petalWidth",
+          "type": "string"
+        }
+      ],
+      "result": {
+        "type": "string"
+      }
+    }
+  ]
+}

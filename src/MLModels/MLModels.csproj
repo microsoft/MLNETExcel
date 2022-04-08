@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.7.0" />
+    <PackageReference Include="Microsoft.ML.FastTree" Version="1.7.0" />
+  </ItemGroup>
+  <ItemGroup Label="IrisClassification">
+    <None Include="IrisClassification.consumption.cs">
+      <DependentUpon>IrisClassification.mbconfig</DependentUpon>
+    </None>
+    <None Include="IrisClassification.training.cs">
+      <DependentUpon>IrisClassification.mbconfig</DependentUpon>
+    </None>
+    <None Include="IrisClassification.zip">
+      <DependentUpon>IrisClassification.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
