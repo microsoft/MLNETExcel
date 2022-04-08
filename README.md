@@ -39,7 +39,7 @@ These instructions will help you get this project up and running.
 ### Update the add-in manifest.xml
 
 1. Open the *manifest.xml* file in the *MLBlazorExcelAddIn/wwwroot* directory in your preferred text editor.
-1. Find the text "<STATIC-WEBSITE-URL>" and replace with the URL of your static website.
+1. Find the text "STATIC-WEBSITE-URL" and replace with the URL of your static website.
 
 ### Build the MLBlazorExcelAddIn project
 
