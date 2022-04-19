@@ -25,7 +25,7 @@ This project showcases the consumption of ML.NET models in Excel as an add-in.
 
     If you prefer to set up the storage account and static website manually, use the following guides to:
 
-  - [Create an Azure Storage Account]((https://docs.microsoft.com/azure/storage/common/storage-account-create?tabs=azure-portal))
+  - [Create an Azure Storage Account](https://docs.microsoft.com/azure/storage/common/storage-account-create?tabs=azure-portal)
   - [Enable static website hosting](https://docs.microsoft.com/azure/storage/blobs/storage-blob-static-website-how-to?tabs=azure-portal)
 - [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/)
 - (Optional) [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
@@ -128,9 +128,9 @@ After a few seconds, your add-in is loaded. For more information on uploading yo
 
 1. Add the following data to the first row of your workbook.
 
-| A | B | C | D |
-| --- | --- | --- | --- |
-|5.1 | 3.5 | 1.4 | 0.2 |
+    | A | B | C | D |
+    | --- | --- | --- | --- |
+    |5.1 | 3.5 | 1.4 | 0.2 |
 
 1. Use the `MLNET.IRIS.PREDICT` custom function defined by your add-in to make a predictions using the data you previously entered as inputs.
 
@@ -144,7 +144,7 @@ Congratulations! You've now used an ML.NET model to make predictions in Excel!
 
 ### Remove Excel Add-In
 
-1. To remove the Excel add-in from your account, clear your browser cache.
+To remove the Excel add-in from your account, clear your browser cache.
 
 ### Delete Azure resources
 
