@@ -11,12 +11,20 @@ This project showcases the consumption of ML.NET models in Excel as an add-in
 ## Prerequisites
 
 - [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
-- [Azure Storage Account](https://docs.microsoft.com/azure/storage/common/storage-account-create?tabs=azure-portal)
-    - [Enable static website hosting](https://docs.microsoft.com/azure/storage/blobs/storage-blob-static-website-how-to?tabs=azure-portal)
 - [Microsoft Account](https://support.microsoft.com/account-billing/how-to-create-a-new-microsoft-account-a84675c3-3e9e-17cf-2911-3d56b15c0aaf)
 - [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)(Optional)
-- [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/)(Optional)
+- [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/)
+- Azure Storage Account with static website hosting enabled
 
+    To simplify the process of setting up an Azure Storage account with static website hosting, use this ARM template:
+    
+    [![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgist.githubusercontent.com%2Fluisquintanilla%2Ff0fd8e9149bd65051cec76db590c51f4%2Fraw%2Ff7f55b564f7429baab568dfa8a28c97473fddc5e%2Fazuredeploy.json)
+    
+    If you prefer to do it manually, you can follow these guides to:
+    
+    - [Create an Azure Storage Account]((https://docs.microsoft.com/azure/storage/common/storage-account-create?tabs=azure-portal))
+    - [Enable static website hosting](https://docs.microsoft.com/azure/storage/blobs/storage-blob-static-website-how-to?tabs=azure-portal)
+ 
 ## Instructions
 
 These instructions will help you get this project up and running.
@@ -114,6 +122,10 @@ After a few seconds, your add-in is loaded. For more information on uploading yo
 Your prediction should display in the cell where you used the custom function.
 
 Congratulations! You've now used an ML.NET model to make predictions in Excel!
+
+## Clean up resources
+
+
 
 ## Next Steps
 
