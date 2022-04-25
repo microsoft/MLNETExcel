@@ -19,7 +19,7 @@ This project showcases the consumption of ML.NET models in Excel as an add-in.
 
     **RECOMMENDED**: To simplify the process of setting up an Azure Storage account with static website hosting, use this ARM template:
 
-    [![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgist.githubusercontent.com%2Fluisquintanilla%2Ff0fd8e9149bd65051cec76db590c51f4%2Fraw%2Ff7f55b564f7429baab568dfa8a28c97473fddc5e%2Fazuredeploy.json)
+    [![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgist.githubusercontent.com%2Fluisquintanilla%2Ff0fd8e9149bd65051cec76db590c51f4%2Fraw%2F8d7383769810f99529f453f4dcef588480347d65%2Fazuredeploy.json)
 
     Using the ARM template, create a new resource group or provide an existing one for your storage account to be placed in. Leave the defaults for the rest of the fields.
 
