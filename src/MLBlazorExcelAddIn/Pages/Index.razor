@@ -38,7 +38,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _modelUrl = "<YOUR-MODEL-BLOB-URL>";
+        _modelUrl = "YOUR-MODEL-BLOB-URL";
         var savedModel = await _client.GetStreamAsync(_modelUrl);
         MLContext mlContext = new MLContext();
         ITransformer _model = mlContext.Model.Load(savedModel, out DataViewSchema schema);

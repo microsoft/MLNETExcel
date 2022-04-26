@@ -53,7 +53,7 @@ These instructions will help you get this project up and running.
 1. Update the `_modelUrl` value with the URL you copied in previous steps.
 
     ```csharp
-    _modelUrl = "<YOUR-MODEL-BLOB-URL>";
+    _modelUrl = "YOUR-MODEL-BLOB-URL";
     ```
 
 ### Update the add-in manifest.xml
@@ -94,15 +94,15 @@ The contents of your `$web` container should look similar to the following.
 
     | Allowed origins | Allowed methods |
     | --- | --- |
-    | YOUR-STATIC-WEBSITE-URL | GET,POST |
-    | YOUR-PUBLIC-IP-ADDRESS | GET,POST |
-    | https://ppc-excel.officeapps.live.com | GET, POST |
-    
+    | YOUR-STATIC-WEBSITE-URL | GET |
+    | 0.0.0.0 | GET |
+    | https://ppc-excel.officeapps.live.com | GET |
+
     ![Azure Storage CORS settings](images/configure-cors.png)
 
-    Replace `YOUR-STATIC-WEBSITE-URL` with the URL you used in the *manifest.xml* file and `YOUR-PUBLIC-IP-ADDRESS` with your public IP address. To find your public IP address, navigate to bing.com and enter the search query ["What is my IP"](https://www.bing.com/search?q=what+is+my+ip).
+    Replace `YOUR-STATIC-WEBSITE-URL` with the URL you used in the *manifest.xml* file.
 
-    ![What is my ip address query results on Bing with IP address blocked by rectangle](images/ip-address.png)
+    **NOTE: Make sure to remove the last backslash from the URL (i.e. https://\<storage-acct-name\>.z14.web.core.windows.net/ should be https://\<storage-acct-name\>.z14.web.core.windows.net)**
 
 ### Upload add-in
 
