@@ -5,6 +5,14 @@ This project showcases the consumption of ML.NET models in Excel as an add-in.
 ## Statement of Purpose
 This repository aims to grow the understanding of consuming ML.NET models in Excel by providing an example of implementation and references to support the [Microsoft Build conference in 2022](https://mybuild.microsoft.com/). It is not intended to be a released product. Therefore, this repository is not for discussing ML.NET, Excel add-in or requesting new features.
 
+## Table of Contents
+
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Instructions for running the application](#instructions)
+- [Next Steps: Train your own model](#next-steps-train-your-own-model)
+- [FAQ/Troubleshooting](#faq--troubleshooting)
+
 ## Project Structure
 
 - src
