@@ -11,6 +11,7 @@ This repository aims to grow the understanding of consuming ML.NET models in Exc
 - [Prerequisites](#prerequisites)
 - [Instructions for running the application](#instructions)
 - [Next Steps: Train your own model](#next-steps-train-your-own-model)
+- [FAQ/Troubleshooting](#faq--troubleshooting)
 
 ## Project Structure
 
