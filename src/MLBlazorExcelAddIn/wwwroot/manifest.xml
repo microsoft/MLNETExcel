@@ -92,8 +92,8 @@
 				<bt:Image id="Icon.80x80" DefaultValue="https://officedev.github.io/Office-Add-in-samples/Samples/excel-shared-runtime-global-state/assets/icon-80.png"/>
 			</bt:Images>
 			<bt:Urls>
-				<bt:Url id="Functions.Script.Url" DefaultValue="STATIC-WEBSITE-URL/js/interop.js"/>
-				<bt:Url id="Functions.Metadata.Url" DefaultValue="STATIC-WEBSITE-URL/functions.json"/>
+				<bt:Url id="Functions.Script.Url" DefaultValue="STATIC-WEBSITE-URLjs/interop.js"/>
+				<bt:Url id="Functions.Metadata.Url" DefaultValue="STATIC-WEBSITE-URLfunctions.json"/>
 				<bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
 				<bt:Url id="Shared.Url" DefaultValue="STATIC-WEBSITE-URL"/>
 			</bt:Urls>
