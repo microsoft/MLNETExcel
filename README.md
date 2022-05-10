@@ -70,7 +70,7 @@ These instructions will help you get this project up and running.
 ### Update the add-in manifest.xml
 
 1. Open the *manifest.xml* file in the *MLBlazorExcelAddIn/wwwroot* directory in your preferred text editor.
-1. Find the text "STATIC-WEBSITE-URL" and replace with the URL of your static website. For more information on finding your static website URL, see [Find the website URL](https://docs.microsoft.com/azure/storage/blobs/storage-blob-static-website-how-to?tabs=azure-portal#find-the-website-url).
+1. Find the text "STATIC-WEBSITE-URL" and **replace all** instances with the URL of your static website. For more information on finding your static website URL, see [Find the website URL](https://docs.microsoft.com/azure/storage/blobs/storage-blob-static-website-how-to?tabs=azure-portal#find-the-website-url).
 
 ### Build the MLBlazorExcelAddIn project
 
