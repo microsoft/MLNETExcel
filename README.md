@@ -70,7 +70,7 @@ These instructions will help you get this project up and running.
 ### Update the add-in manifest.xml
 
 1. Open the *manifest.xml* file in the *MLBlazorExcelAddIn/wwwroot* directory in your preferred text editor.
-1. Find the text "STATIC-WEBSITE-URL" and replace with the URL of your static website. For more information on finding your static website URL, see [Find the website URL](https://docs.microsoft.com/azure/storage/blobs/storage-blob-static-website-how-to?tabs=azure-portal#find-the-website-url).
+1. Find the text "STATIC-WEBSITE-URL" and **replace all** instances with the URL of your static website. For more information on finding your static website URL, see [Find the website URL](https://docs.microsoft.com/azure/storage/blobs/storage-blob-static-website-how-to?tabs=azure-portal#find-the-website-url).
 
 ### Build the MLBlazorExcelAddIn project
 
@@ -80,13 +80,15 @@ These instructions will help you get this project up and running.
     cd src/MLBlazorExcelAddIn
     ```
 
-1. Enter the following command to build the project:
+1. Enter the following command to build and publish the project:
 
     ```dotnetcli
     dotnet publish -c Release
     ```
 
 The output from the build process is stored in the *MLBlazorExcelAddIn/bin/Release/net6.0/publish/wwwroot* directory.
+
+**MacOS - If you run into an error similar to "The "GetFileHash" task failed unexpectedly" building and publishing your application, see the [FAQ section](#the-getfilehash-task-failed-unexpectedly).** 
 
 ### Upload Excel Add-In to static website
 
@@ -155,7 +157,9 @@ Congratulations! You've now used an ML.NET model to make predictions in Excel!
 
 ### Remove Excel Add-In
 
-To remove the Excel add-in from your account, clear your browser cache.
+To remove the Excel add-in from your account, clear your browser cache. 
+
+This sample was tested using Microsoft Edge. For more information on clearing your cache on Microsoft Edge, see [View and delete browser history in Microsoft Edge](https://support.microsoft.com/microsoft-edge/view-and-delete-browser-history-in-microsoft-edge-00cf7943-a9e1-975a-a33d-ac10ce454ca4)
 
 ### Delete Azure resources
 
@@ -408,6 +412,10 @@ The "GetFileHash" task failed unexpectedly
 This is a [known issue in .NET](https://github.com/dotnet/aspnetcore/issues/40328). 
 
 To fix it, run the `dotnet publish -c Release` command again.
+
+### $web container not public
+
+In some instances you might need to make the `$web` container public in order to view your website. For more information, see [Set the public access level for a container](https://docs.microsoft.com/azure/storage/blobs/anonymous-read-access-configure?tabs=portal#set-the-public-access-level-for-a-container).
 
 ## Resources
 
